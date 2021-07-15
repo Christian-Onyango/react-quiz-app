@@ -47,7 +47,7 @@ export const Question = ({
 
   return (
     <div className="question">
-      <h1>Quesion {currQues + 1}</h1>
+      <h1>Question {currQues + 1}</h1>
       <div className="singleQuestion">
         <h2>{questions[currQues].question}</h2>
         <div className="options">
