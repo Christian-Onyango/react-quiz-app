@@ -1,5 +1,5 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import "./App.css"
 import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
@@ -10,7 +10,7 @@ import quizes from "./Data/Questions"
 
 function App() {
   const [name, setName] = useState("")
-  const [questions, setQuestions] = useState(quizes)
+  const [questions] = useState(quizes)
   const [score, setScore] = useState(0)
   return (
     <BrowserRouter>
