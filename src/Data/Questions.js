@@ -83,4 +83,70 @@ export default [
     correct_answer: "Mobigo Phones",
     incorrect_answers: ["Neon Phones", "Samsung Phones", "Nokia Phones"],
   },
+  {
+    question: "Who is the regional manager for Nairobi region?",
+    correct_answer: "Mark Mosoti",
+    incorrect_answers: ["Serah Gikaria", "Stella Misati", "Esther Kiaraho"],
+  },
+  {
+    question: "Who is the regional manager for Coast region?",
+    correct_answer: "Esther Kiaraho",
+    incorrect_answers: ["Serah Gikaria", "Mark Mosoti", "Stella Misati"],
+  },
+  {
+    question: "Who is the Safaricom Supply Chain HOD?",
+    correct_answer: "Maryanne Karanja",
+    incorrect_answers: ["Tom Mochama", "Francis Murabula", "Florence Kiburi"],
+  },
+  {
+    question: "Who is the regional manager for Riftvalley region?",
+    correct_answer: "Serah Gikaria",
+    incorrect_answers: ["Esther Kiaraho", "Mark Mosoti", "Eugene Were"],
+  },
+  {
+    question: "Who is the regional manager for central and North Eastern?",
+    correct_answer: "Stella Misati",
+    incorrect_answers: ["Esther Kiaraho", "Eugene Were", "Serah Gikaria"],
+  },
+  {
+    question: "What does the abbreviation NPS in customer service mean?",
+    correct_answer: "Net Promoter score",
+    incorrect_answers: [
+      "National Police service",
+      "Net Professional Service",
+      "Net Prism of Success",
+    ],
+  },
+  {
+    question: "Who is the current Safaricom CEO?",
+    correct_answer: "Peter Ndegwa",
+    incorrect_answers: ["Sylvia Mulinge", "Michael Joseph", "Bob Collymore"],
+  },
+  {
+    question:
+      "How do you tell a staff is authorized to collect stocks at the ministores",
+    correct_answer:
+      "We use the portal to identify the staff details and their current status.",
+    incorrect_answers: [
+      "By face and name since they usually collect stocks for a particular dealer.",
+      "Through an email authorization letter sent by the distribution team.",
+      "All of the above.",
+    ],
+  },
+  {
+    question:
+      "When a dealer nominates staff in the portal, how long does it take to reflect in your ministore",
+    correct_answer: "Less than a minute",
+    incorrect_answers: ["1 hour", "2 hours", "24 hours"],
+  },
+  {
+    question:
+      "In picklist nomination in the dealer portal, which class of staff does not qualify to be issued with stock?",
+    correct_answer: "Retired Staff",
+    incorrect_answers: [
+      "Approved staff",
+      "A staff with a passport as an identification document.",
+      "An MPESA agent staff",
+    ],
+  },
 ]
