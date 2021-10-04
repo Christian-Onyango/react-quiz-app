@@ -1,4 +1,4 @@
-export default [
+const questions = [
   {
     question: "What is FIFO",
     correct_answer: "First in First Out",
@@ -150,3 +150,4 @@ export default [
     ],
   },
 ]
+export default questions
