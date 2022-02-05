@@ -1,26 +1,38 @@
-import React, { useState } from "react"
-import "./Home.css"
-import { MenuItem, TextField, Button } from "@material-ui/core"
-import { organization } from "../../Data/Organization"
-import { useHistory } from "react-router-dom"
-import { ErrorMessage } from "../../components/ErrorMessage/ErrorMessage"
+import React, { useState, useEffect } from "react";
+import "./Home.css";
+import { MenuItem, TextField, Button } from "@material-ui/core";
+import { organization } from "../../Data/Organization";
+import { useHistory } from "react-router-dom";
+import { ErrorMessage } from "../../components/ErrorMessage/ErrorMessage";
 
 const Home = ({ name, setName, fetchQuestions }) => {
-  const [category, setCategory] = useState("")
-  const [error, setError] = useState(false)
+  //temp name state to handle uncontrolled input warning
+  const [tempName, setTempName] = useState("");
 
-  const history = useHistory()
+  //set the name state to the temp name state
+  useEffect(() => {
+    if (!name) {
+      setTempName("");
+    } else {
+      setTempName(name);
+    }
+  }, [name, setTempName]);
+
+  const [category, setCategory] = useState("");
+  const [error, setError] = useState(false);
+
+  const history = useHistory();
 
   const handlesSubmit = () => {
     if (!category || !name) {
-      setError(true)
-      return
+      setError(true);
+      return;
     } else {
-      setError(false)
+      setError(false);
       //fetchQuestions(category)
-      history.push("/quiz")
+      history.push("/quiz");
     }
-  }
+  };
   return (
     <div className="content">
       <div className="settings">
@@ -31,6 +43,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
             style={{ marginBottom: 25 }}
             label="Enter Your Name"
             variant="outlined"
+            value={tempName}
             onChange={(e) => setName(e.target.value)}
           />
 
@@ -48,10 +61,12 @@ const Home = ({ name, setName, fetchQuestions }) => {
               </MenuItem>
             ))}
           </TextField>
+          {/* Disable button if name is null */}
           <Button
             variant="contained"
             color="primary"
             size="large"
+            disabled={!tempName}
             onClick={handlesSubmit}
           >
             Start Quiz
@@ -61,7 +76,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
 
       <img src="/quiz.svg" className="banner" alt="quiz img" />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
